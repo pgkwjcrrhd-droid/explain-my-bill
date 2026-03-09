@@ -84,22 +84,20 @@ export default function ChargeBreakdown() {
     },
   ]
 
-  const totalCharges = sections.reduce((sum, s) => sum + s.amount, 0)
-
   return (
     <motion.section
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
-      className="mb-12"
+      className="mb-8 sm:mb-12"
     >
-      <div className="flex items-center gap-3 mb-6">
-        <div className="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center">
-          <Receipt className="w-4 h-4 text-emerald-400" />
+      <div className="flex items-center gap-3 mb-4 sm:mb-6">
+        <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center flex-shrink-0">
+          <Receipt className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400" />
         </div>
         <div>
-          <h2 className="text-xl font-bold text-white">Your Charges, Explained</h2>
-          <p className="text-sm text-slate-500">Click any section to see line-item details</p>
+          <h2 className="text-lg sm:text-xl font-bold text-white">Your Charges, Explained</h2>
+          <p className="text-xs sm:text-sm text-slate-500">Tap any section to see line-item details</p>
         </div>
       </div>
 
@@ -116,25 +114,25 @@ export default function ChargeBreakdown() {
                   ? 'border-green-500/20 bg-green-500/[0.03]'
                   : isOpen
                   ? 'border-white/[0.08] bg-white/[0.03]'
-                  : 'border-white/[0.05] bg-white/[0.01] hover:bg-white/[0.02] hover:border-white/[0.07]'
+                  : 'border-white/[0.05] bg-white/[0.01] active:bg-white/[0.02]'
               }`}
             >
               <button
                 onClick={() => setExpanded(isOpen ? null : section.id)}
-                className="w-full px-5 py-4 flex items-center gap-4 text-left"
+                className="w-full px-4 sm:px-5 py-3.5 sm:py-4 flex items-center gap-3 sm:gap-4 text-left"
               >
-                <div className={`w-8 h-8 rounded-lg ${section.bg} flex items-center justify-center flex-shrink-0 ${section.color}`}>
+                <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg ${section.bg} flex items-center justify-center flex-shrink-0 ${section.color}`}>
                   {section.icon}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-semibold text-white">{section.name}</p>
+                  <p className="text-sm font-semibold text-white truncate">{section.name}</p>
                   <p className="text-xs text-slate-500 mt-0.5">{section.items.length} item{section.items.length !== 1 ? 's' : ''}</p>
                 </div>
-                <span className={`text-base font-bold tabular-nums mr-2 ${section.amount < 0 ? 'text-green-400' : 'text-white'}`}>
+                <span className={`text-sm sm:text-base font-bold tabular-nums mr-1 sm:mr-2 flex-shrink-0 ${section.amount < 0 ? 'text-green-400' : 'text-white'}`}>
                   {formatCurrency(section.amount)}
                 </span>
                 <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.2 }}>
-                  <ChevronDown className="w-4 h-4 text-slate-500" />
+                  <ChevronDown className="w-4 h-4 text-slate-500 flex-shrink-0" />
                 </motion.div>
               </button>
 
@@ -147,18 +145,18 @@ export default function ChargeBreakdown() {
                     transition={{ duration: 0.25 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-5 pb-5 border-t border-white/[0.04]">
+                    <div className="px-4 sm:px-5 pb-4 sm:pb-5 border-t border-white/[0.04]">
                       {/* Explanation */}
-                      <p className="text-sm text-slate-400 leading-relaxed py-4 border-b border-white/[0.03]">
+                      <p className="text-sm text-slate-400 leading-relaxed py-3 sm:py-4 border-b border-white/[0.03]">
                         {section.explanation}
                       </p>
 
                       {/* Line items */}
-                      <div className="pt-3 space-y-2">
+                      <div className="pt-2.5 sm:pt-3 space-y-1.5 sm:space-y-2">
                         {section.items.map((item: any, idx: number) => (
-                          <div key={idx} className="flex items-center justify-between py-1.5">
-                            <span className="text-sm text-slate-300">{item.name}</span>
-                            <span className={`text-sm font-medium tabular-nums ${
+                          <div key={idx} className="flex items-center justify-between py-1 sm:py-1.5 gap-3">
+                            <span className="text-xs sm:text-sm text-slate-300 min-w-0">{item.name}</span>
+                            <span className={`text-xs sm:text-sm font-medium tabular-nums flex-shrink-0 ${
                               item.amount < 0 ? 'text-green-400' : item.amount === 0 || item.amount === null ? 'text-slate-500' : 'text-white'
                             }`}>
                               {item.amount === null ? 'Included' : formatCurrency(item.amount)}
@@ -168,7 +166,7 @@ export default function ChargeBreakdown() {
                       </div>
 
                       {/* Data confidence label */}
-                      <div className="mt-4 pt-3 border-t border-white/[0.03]">
+                      <div className="mt-3 sm:mt-4 pt-2.5 sm:pt-3 border-t border-white/[0.03]">
                         <span className="inline-flex items-center gap-1.5 text-[10px] text-slate-500 bg-white/[0.03] px-2 py-1 rounded">
                           <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
                           Extracted from uploaded bill — high confidence
@@ -188,16 +186,16 @@ export default function ChargeBreakdown() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="mt-4 rounded-xl border border-blue-500/20 bg-gradient-to-r from-blue-500/[0.06] to-indigo-500/[0.04] p-5"
+        className="mt-3 sm:mt-4 rounded-xl border border-blue-500/20 bg-gradient-to-r from-blue-500/[0.06] to-indigo-500/[0.04] p-4 sm:p-5"
       >
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-4">
           <div>
             <p className="text-xs text-slate-500 font-medium uppercase tracking-wider mb-1">Total Amount Due</p>
-            <p className="text-3xl font-bold text-white tabular-nums">{formatCurrency(currentBill.total)}</p>
+            <p className="text-2xl sm:text-3xl font-bold text-white tabular-nums">{formatCurrency(currentBill.total)}</p>
           </div>
-          <div className="text-right">
+          <div className="text-right flex-shrink-0">
             <p className="text-xs text-green-400/60 font-medium uppercase tracking-wider mb-1">You Save</p>
-            <p className="text-2xl font-bold text-green-400 tabular-nums">{formatCurrency(currentBill.totalSavings)}<span className="text-sm text-green-400/60">/mo</span></p>
+            <p className="text-xl sm:text-2xl font-bold text-green-400 tabular-nums">{formatCurrency(currentBill.totalSavings)}<span className="text-xs sm:text-sm text-green-400/60">/mo</span></p>
           </div>
         </div>
       </motion.div>

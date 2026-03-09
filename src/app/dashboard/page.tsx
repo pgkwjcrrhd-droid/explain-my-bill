@@ -28,24 +28,24 @@ export default function Dashboard() {
   if (!isAuthed) return null
 
   return (
-    <div className="min-h-screen bg-[#020617]">
+    <div className="min-h-screen-safe bg-[#020617]">
       {/* Ambient background glow */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-blue-500/[0.03] rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-indigo-500/[0.03] rounded-full blur-[100px]" />
+        <div className="absolute top-0 left-1/4 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-blue-500/[0.03] rounded-full blur-[80px] sm:blur-[120px]" />
+        <div className="absolute bottom-0 right-1/4 w-[250px] sm:w-[500px] h-[250px] sm:h-[500px] bg-indigo-500/[0.03] rounded-full blur-[60px] sm:blur-[100px]" />
       </div>
 
       {/* Header */}
-      <header className="relative border-b border-white/[0.06] bg-slate-950/80 backdrop-blur-xl sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto px-6 py-4">
+      <header className="relative border-b border-white/[0.06] bg-slate-950/80 backdrop-blur-xl sticky top-0 z-50 pt-safe">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
-                <Shield className="w-4 h-4 text-white" />
+            <div className="flex items-center gap-2.5 sm:gap-3">
+              <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Shield className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
               </div>
-              <div>
-                <h1 className="text-lg font-semibold text-white tracking-tight">Explain My Bill</h1>
-                <p className="text-[11px] text-slate-500 tracking-wide uppercase">Comcast Business • Prototype</p>
+              <div className="min-w-0">
+                <h1 className="text-base sm:text-lg font-semibold text-white tracking-tight truncate">Explain My Bill</h1>
+                <p className="text-[10px] sm:text-[11px] text-slate-500 tracking-wide uppercase">Comcast Business</p>
               </div>
             </div>
             <button
@@ -53,28 +53,28 @@ export default function Dashboard() {
                 sessionStorage.removeItem('cbpso_auth')
                 router.push('/')
               }}
-              className="flex items-center gap-2 px-3 py-1.5 text-xs font-medium text-slate-500 hover:text-slate-300 border border-white/[0.06] rounded-lg hover:border-white/[0.12] transition-all duration-200"
+              className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 text-xs font-medium text-slate-500 hover:text-slate-300 active:text-slate-200 border border-white/[0.06] rounded-lg hover:border-white/[0.12] transition-all duration-200 flex-shrink-0"
             >
               <LogOut className="w-3.5 h-3.5" />
-              Sign Out
+              <span className="hidden sm:inline">Sign Out</span>
             </button>
           </div>
         </div>
       </header>
 
-      <main className="relative max-w-6xl mx-auto px-6">
+      <main className="relative max-w-6xl mx-auto px-4 sm:px-6">
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="pt-12 pb-4"
+          className="pt-6 sm:pt-10 md:pt-12 pb-2 sm:pb-4"
         >
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-sm text-blue-400 font-medium mb-3"
+            className="text-xs sm:text-sm text-blue-400 font-medium mb-2 sm:mb-3"
           >
             February 2026 Statement
           </motion.p>
@@ -82,7 +82,7 @@ export default function Dashboard() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-2.5 sm:mb-4"
           >
             Your bill, explained.
           </motion.h2>
@@ -90,15 +90,15 @@ export default function Dashboard() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-lg text-slate-400 max-w-2xl leading-relaxed"
+            className="text-base sm:text-lg text-slate-400 max-w-2xl leading-relaxed"
           >
-            Every charge broken down in plain English. No jargon, no surprises—just clarity about what you're paying for and why.
+            Every charge broken down in plain English. No jargon, no surprises — just clarity about what you're paying for and why.
           </motion.p>
         </motion.div>
 
         <InsightBanner />
 
-        <div className="py-6">
+        <div className="py-4 sm:py-6">
           <BillSummary />
         </div>
 
@@ -109,8 +109,8 @@ export default function Dashboard() {
         <PrototypeNotes />
 
         {/* Footer */}
-        <footer className="border-t border-white/[0.04] py-8 mt-8 mb-4">
-          <div className="flex items-center justify-between">
+        <footer className="border-t border-white/[0.04] py-6 sm:py-8 mt-6 sm:mt-8 mb-4 pb-safe">
+          <div className="flex flex-col sm:flex-row items-center sm:justify-between gap-2 text-center sm:text-left">
             <p className="text-xs text-slate-600">
               Explain My Bill — Executive Prototype • Comcast Business
             </p>

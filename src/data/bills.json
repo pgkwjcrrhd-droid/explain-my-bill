@@ -1,0 +1,304 @@
+{
+  "account": "8499 10 088 0241988",
+  "customer": "Nicholas Fernandez",
+  "address": "503 WOODVIEW DR, EXTON, PA, 19341-1738",
+  "phone": "(484)879-4476",
+  "bills": [
+    {
+      "id": "bill-202412",
+      "month": "December 2024",
+      "billingDate": "2024-12-07",
+      "servicePeriod": {
+        "start": "2024-12-12",
+        "end": "2025-01-11"
+      },
+      "total": 104.90,
+      "previousBalance": 104.90,
+      "dueDate": "2025-01-01",
+      "lineItems": {
+        "plan": {
+          "name": "My Xfinity Plan",
+          "amount": 18.95
+        },
+        "services": {
+          "name": "Services",
+          "amount": 59.00,
+          "details": [
+            { "name": "TV Ultimate", "amount": null },
+            { "name": "Internet 1200 Mbps", "amount": null },
+            { "name": "Voice", "amount": 4.00 },
+            { "name": "Home Pro Protection", "amount": 55.00 }
+          ]
+        },
+        "discounts": {
+          "name": "Service Discount",
+          "amount": -40.05
+        },
+        "videoRecording": {
+          "name": "24/7 Video Recording",
+          "amount": 4.00
+        },
+        "addOns": {
+          "name": "Add-ons & Premium Services",
+          "amount": 24.00,
+          "details": [
+            { "name": "Premium DVR", "amount": 16.00 },
+            { "name": "Xfinity TV Latino (w/ -$10 discount)", "amount": 0.00 },
+            { "name": "Gigabit Extra (w/ -$2 discount)", "amount": 8.00 }
+          ]
+        },
+        "equipment": {
+          "name": "Equipment",
+          "amount": 36.00,
+          "details": [
+            { "name": "TV Box + Remote (3x @ $8)", "amount": 24.00 },
+            { "name": "Modem", "amount": 12.00 }
+          ]
+        },
+        "otherProviders": {
+          "name": "Other Providers",
+          "amount": 12.40,
+          "details": [
+            { "name": "Netflix", "amount": 12.40 }
+          ]
+        },
+        "taxesAndFees": {
+          "name": "Taxes & Fees",
+          "amount": 9.55,
+          "details": [
+            { "name": "Federal USF", "amount": 0.29 },
+            { "name": "Regulatory Fee", "amount": 0.88 },
+            { "name": "Franchise Fee", "amount": 2.30 },
+            { "name": "Sales Tax", "amount": 4.13 },
+            { "name": "911 Service Fee", "amount": 1.95 }
+          ]
+        }
+      },
+      "totalSavings": 65.05
+    },
+    {
+      "id": "bill-202505",
+      "month": "May 2025",
+      "billingDate": "2025-05-07",
+      "servicePeriod": {
+        "start": "2025-05-12",
+        "end": "2025-06-11"
+      },
+      "total": 112.38,
+      "previousBalance": 112.38,
+      "dueDate": "2025-06-01",
+      "lineItems": {
+        "plan": {
+          "name": "My Xfinity Plan",
+          "amount": 22.95,
+          "change": { "from": 18.95, "to": 22.95, "type": "increase" }
+        },
+        "services": {
+          "name": "Services",
+          "amount": 63.00,
+          "change": { "from": 59.00, "to": 63.00, "type": "increase" },
+          "details": [
+            { "name": "TV Ultimate", "amount": null },
+            { "name": "Internet 1300 Mbps", "amount": null, "change": "Upgraded from 1200 Mbps" },
+            { "name": "Voice", "amount": 4.00 },
+            { "name": "Home Security", "amount": 55.00 }
+          ]
+        },
+        "discounts": {
+          "name": "Service Discount",
+          "amount": -40.05
+        },
+        "videoRecording": {
+          "name": "24/7 Video Recording",
+          "amount": 4.00
+        },
+        "addOns": {
+          "name": "Add-ons & Premium Services",
+          "amount": 24.00,
+          "details": [
+            { "name": "Premium DVR", "amount": 16.00 },
+            { "name": "Xfinity TV Latino (w/ -$10 discount)", "amount": 0.00 },
+            { "name": "Gigabit Extra (w/ -$2 discount)", "amount": 8.00 }
+          ]
+        },
+        "equipment": {
+          "name": "Equipment",
+          "amount": 40.80,
+          "change": { "from": 36.00, "to": 40.80, "type": "increase" },
+          "details": [
+            { "name": "TV Box + Remote (3x @ $9.60)", "amount": 28.80, "change": "Increased from 3x @ $8" },
+            { "name": "Modem", "amount": 12.00 }
+          ]
+        },
+        "otherProviders": {
+          "name": "Other Providers",
+          "amount": 14.40,
+          "change": { "from": 12.40, "to": 14.40, "type": "increase" },
+          "details": [
+            { "name": "Netflix", "amount": 14.40, "change": "Increased" }
+          ]
+        },
+        "taxesAndFees": {
+          "name": "Taxes & Fees",
+          "amount": 10.23,
+          "details": [
+            { "name": "Federal USF", "amount": 0.30 },
+            { "name": "Regulatory Fee", "amount": 0.89 },
+            { "name": "Franchise Fee", "amount": 2.52 },
+            { "name": "Sales Tax", "amount": 4.57 },
+            { "name": "911 Service Fee", "amount": 1.95 }
+          ]
+        }
+      },
+      "totalSavings": 66.25
+    },
+    {
+      "id": "bill-202601",
+      "month": "January 2026",
+      "billingDate": "2026-01-07",
+      "servicePeriod": {
+        "start": "2026-01-12",
+        "end": "2026-02-11"
+      },
+      "total": 102.58,
+      "previousBalance": 125.17,
+      "dueDate": "2026-02-01",
+      "note": "Includes new rates told about last month",
+      "lineItems": {
+        "plan": {
+          "name": "My Xfinity Plan",
+          "amount": 22.95
+        },
+        "services": {
+          "name": "Services",
+          "amount": 63.00,
+          "details": [
+            { "name": "TV Ultimate", "amount": null },
+            { "name": "Internet 1300 Mbps", "amount": null },
+            { "name": "Voice", "amount": 4.00 },
+            { "name": "Home Security", "amount": 55.00 }
+          ]
+        },
+        "discounts": {
+          "name": "Service Discount",
+          "amount": -40.05
+        },
+        "videoRecording": {
+          "name": "24/7 Video Recording",
+          "amount": 4.00
+        },
+        "addOns": {
+          "name": "Add-ons & Premium Services",
+          "amount": 24.00,
+          "details": [
+            { "name": "Premium DVR", "amount": 16.00 },
+            { "name": "Xfinity TV Latino (w/ -$10 discount)", "amount": 0.00 },
+            { "name": "Gigabit Extra (w/ -$2 discount)", "amount": 8.00 }
+          ]
+        },
+        "equipment": {
+          "name": "Equipment",
+          "amount": 45.60,
+          "change": { "from": 40.80, "to": 45.60, "type": "increase" },
+          "details": [
+            { "name": "TV Box + Remote (3x @ $11.20)", "amount": 33.60, "change": "Increased from 3x @ $9.60" },
+            { "name": "Modem", "amount": 12.00 }
+          ]
+        },
+        "otherProviders": {
+          "name": "Other Providers",
+          "amount": 0.00,
+          "change": { "from": 14.40, "to": 0.00, "type": "decrease" },
+          "details": [
+            { "name": "Apple MLS Season Pass", "amount": 0.00, "change": "Netflix removed, replaced with Apple MLS" }
+          ]
+        },
+        "taxesAndFees": {
+          "name": "Taxes & Fees",
+          "amount": 10.03,
+          "details": [
+            { "name": "Federal USF", "amount": 0.30 },
+            { "name": "Regulatory Fee", "amount": 1.05 },
+            { "name": "Franchise Fee", "amount": 2.71 },
+            { "name": "Sales Tax", "amount": 4.02 },
+            { "name": "911 Service Fee", "amount": 1.95 }
+          ]
+        }
+      },
+      "totalSavings": 67.45
+    },
+    {
+      "id": "bill-202602",
+      "month": "February 2026",
+      "billingDate": "2026-02-07",
+      "servicePeriod": {
+        "start": "2026-02-12",
+        "end": "2026-03-11"
+      },
+      "total": 102.58,
+      "previousBalance": 102.58,
+      "dueDate": "2026-03-01",
+      "isCurrentBill": true,
+      "lineItems": {
+        "plan": {
+          "name": "My Xfinity Plan",
+          "amount": 22.95
+        },
+        "services": {
+          "name": "Services",
+          "amount": 63.00,
+          "details": [
+            { "name": "TV Ultimate", "amount": null },
+            { "name": "Internet Gigabit Extra", "amount": null },
+            { "name": "Voice", "amount": 4.00 },
+            { "name": "Home Security", "amount": 55.00 }
+          ]
+        },
+        "discounts": {
+          "name": "Service Discount",
+          "amount": -40.05
+        },
+        "videoRecording": {
+          "name": "24/7 Video Recording",
+          "amount": 4.00
+        },
+        "addOns": {
+          "name": "Add-ons & Premium Services",
+          "amount": 24.00,
+          "details": [
+            { "name": "Premium DVR", "amount": 16.00 },
+            { "name": "Xfinity TV Latino (w/ -$10 discount)", "amount": 0.00 },
+            { "name": "Gigabit Extra (w/ -$2 discount)", "amount": 8.00 }
+          ]
+        },
+        "equipment": {
+          "name": "Equipment",
+          "amount": 45.60,
+          "details": [
+            { "name": "TV Box + Remote (3x @ $11.20)", "amount": 33.60 },
+            { "name": "Modem", "amount": 12.00 }
+          ]
+        },
+        "otherProviders": {
+          "name": "Other Providers",
+          "amount": 0.00,
+          "details": [
+            { "name": "Apple MLS Season Pass", "amount": 0.00 }
+          ]
+        },
+        "taxesAndFees": {
+          "name": "Taxes & Fees",
+          "amount": 10.03,
+          "details": [
+            { "name": "Federal USF", "amount": 0.30 },
+            { "name": "Regulatory Fee", "amount": 1.05 },
+            { "name": "Franchise Fee", "amount": 2.71 },
+            { "name": "Sales Tax", "amount": 4.02 },
+            { "name": "911 Service Fee", "amount": 1.95 }
+          ]
+        }
+      },
+      "totalSavings": 67.45
+    }
+  ]
+}
